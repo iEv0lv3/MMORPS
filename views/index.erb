@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock, Paper, Scissors</title>
+  <link href="style1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <div id="container">
+  	<h1>MMORPS</h1>
+
+      <form action="/rps" method="post" id="play_form">
+
+      <label for="user_choice">Choose Rock</label>
+      <input type="submit" value="rock" name="choice" class="choice">
+      </br>
+
+      <label for="user_choice">Choose Paper</label>
+      <input type="submit" value="paper" name="choice" class="choice">
+      </br>
+
+      <label for="user_choice">Choose Scissors</label>
+      <input type="submit" value="scissors" name="choice" class="choice">
+      </br>
+      </br>
+
+      </form>
+
+      <div id="messages">
+
+      <ul>
+        <li>Player Points: <%= session[:player_points] %></li>
+        <li>Computer Points: <%= session[:computer_points] %></li>
+      </ul>
+
+    </br></br>
+
+      <h2><%= result[0] %></h2>
+
+
+  </div>
+
+  <form action="/reset" method="post">
+      <input type="submit" name="reset" value="Reset">
+  </form>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

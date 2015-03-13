@@ -1,6 +1,8 @@
 require "sinatra"
 require "pry"
 
+#Version 1.0
+
 use Rack::Session::Cookie, {
   :expire_after => 2592000, # In seconds
   :secret => 'keep_it_secret_keep_it_safe'
